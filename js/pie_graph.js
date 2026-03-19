@@ -191,24 +191,18 @@ var ctx = document.getElementById('myChart').getContext('2d');
 var myChart = new Chart(ctx, {
     type: 'pie',
     data: {
-        labels: ['Add deer in Winter - Pop. before Winter', 'Add deer in Winter - Pop. after Winter', 'Add deer in Winter - Pop. end of Y1', 'Add deer in Spring - Pop. before Winter', 'Add deer in Spring - Pop. after Winter', 'Add deer in Spring - Pop. end of Y1'],
+        labels: ['Trees', 'Bushes', 'Grass'],
         datasets: [{
-            data: [0, 0, 0, 0, 0, 0],  // Default values
+            data: [0, 0, 0],  // Default values
             backgroundColor: [
-                'rgba(255, 99, 132, 0.9)',
-                'rgba(54, 162, 235, 0.9)',
-                'rgba(255, 206, 86, 0.9)',
                 'rgba(75, 192, 192, 0.9)',
-                'rgba(153, 102, 255, 0.9)',
-                'rgba(255, 159, 64, 0.9)'
+                'rgba(255, 206, 86, 0.9)',
+                'rgba(54, 162, 235, 0.9)'
             ],
             borderColor: [
-                'rgba(255,99,132,1)',
-                'rgba(54, 162, 235, 1)',
-                'rgba(255, 206, 86, 1)',
                 'rgba(75, 192, 192, 1)',
-                'rgba(153, 102, 255, 1)',
-                'rgba(255, 159, 64, 1)'
+                'rgba(255, 206, 86, 1)',
+                'rgba(54, 162, 235, 1)'
             ],
             borderWidth: 1,
         }]
@@ -229,23 +223,17 @@ var myChart = new Chart(ctx, {
 });
 
 function updateChart() {
-    var winterBefore = document.getElementById('7. Graph - Add deer in Winter - Pop. before Winter').value || 0;
-    var winterAfter = document.getElementById('7. Graph - Add deer in Winter - Pop. after Winter').value || 0;
-    var winterEnd = document.getElementById('7. Graph - Add deer in Winter - Pop. end of Y1').value || 0;
-    var springBefore = document.getElementById('7. Graph - Add deer in Spring - Pop. before Winter').value || 0;
-    var springAfter = document.getElementById('7. Graph - Add deer in Spring - Pop. after Winter').value || 0;
-    var springEnd = document.getElementById('7. Graph - Add deer in Spring - Pop. end of Y1').value || 0;
+    var trees = document.getElementById('7. Graph - Increase in Trees').value || 0;
+    var bushes = document.getElementById('7. Graph - Increase in Bushes').value || 0;
+    var grass = document.getElementById('7. Graph - Increase in Grass').value || 0;
 
-    myChart.data.datasets[0].data = [winterBefore, winterAfter, winterEnd, springBefore, springAfter, springEnd];
+    myChart.data.datasets[0].data = [trees, bushes, grass];
     myChart.update();
 }
 // Add input event listeners to all input fields
-document.getElementById('7. Graph - Add deer in Winter - Pop. before Winter').addEventListener('input', updateChart);
-document.getElementById('7. Graph - Add deer in Winter - Pop. after Winter').addEventListener('input', updateChart);
-document.getElementById('7. Graph - Add deer in Winter - Pop. end of Y1').addEventListener('input', updateChart);
-document.getElementById('7. Graph - Add deer in Spring - Pop. before Winter').addEventListener('input', updateChart);
-document.getElementById('7. Graph - Add deer in Spring - Pop. after Winter').addEventListener('input', updateChart);
-document.getElementById('7. Graph - Add deer in Spring - Pop. end of Y1').addEventListener('input', updateChart);
+document.getElementById('7. Graph - Increase in Trees').addEventListener('input', updateChart);
+document.getElementById('7. Graph - Increase in Bushes').addEventListener('input', updateChart);
+document.getElementById('7. Graph - Increase in Grass').addEventListener('input', updateChart);
 
 $(document).on('click', '.remove', function () {
     $(this).parent().next('hr').remove();

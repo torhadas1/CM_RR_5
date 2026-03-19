@@ -44,142 +44,21 @@
         <!--main screen column-->
         <div class="main_screen column">
             <div class="question_container" style="margin-right: 30px;">
-                <h1> The following table shows the forecasted number of Felthorn Bushes,
-                    Lowland Pacas and Leopards in Year 6 to Year 8. Leopards eat <br> Lowland
-                    Pacas, and Lowland Pacas in turn eat Felthorn Bushes.</h1>
+                <h1>Ecologists in the Kebos Woodlands study three bird species responsible for seed dispersal: Canopy Jays, Ground Thrushes, and River Finches. Each bird disperses a different number of seeds per day.</h1>
                 <br>
-                <table class="exhibit-table">
-                    <tr>
-                        <th> Year (n)</th>
-                        <th>Fawns born
-                            (F)</th>
-                        <th>Predator
-                            Density (p) </th>
-                        <th> Vegetation
-                            Density (v)
-                        </th>
-                        <th>Harsh Winter
-                            (w) </th>
-                        <th>Surviving
-                            Fawns (S) </th>
-                    </tr>
-                    <tr>
-                        <td style="text-align: center;">1</td>
-                        <td>
-                            <div class="draggable" draggable="true">800
-                            </div>
-                        </td>
-                        <td>
-                            <div class="draggable" draggable="true">1
-                            </div>
-                        </td>
-                        <td>
-                            <div class="draggable" draggable="true">1
-                            </div>
-                        </td>
-                        <td>
-                            <div class="draggable" draggable="true">0
-                            </div>
-                        </td>
-                        <td>
-                            <div class="draggable" draggable="true">560
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td style="text-align: center;">2</td>
-                        <td>
-                            <div class="draggable" draggable="true">800
-                            </div>
-                        </td>
-                        <td>
-                            <div class="draggable" draggable="true">2
-                            </div>
-                        </td>
-                        <td>
-                            <div class="draggable" draggable="true">1
-                            </div>
-                        </td>
-                        <td>
-                            <div class="draggable" draggable="true">1
-                            </div>
-                        </td>
-                        <td>
-                            <div class="draggable" draggable="true">410
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td style="text-align: center;">3</td>
-                        <td>
-                            <div class="draggable" draggable="true">400
-                            </div>
-                        </td>
-                        <td>
-                            <div class="draggable" draggable="true">1.5
-                            </div>
-                        </td>
-                        <td>
-                            <div class="draggable" draggable="true">1.5
-                            </div>
-                        </td>
-                        <td>
-                            <div class="draggable" draggable="true">1
-                            </div>
-                        </td>
-                        <td>
-                            <div class="draggable" draggable="true">230
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td style="text-align: center;">4</td>
-                        <td>
-                            <div class="draggable" draggable="true">960
-                            </div>
-                        </td>
-                        <td>
-                            <div class="draggable" draggable="true">1.5
-                            </div>
-                        </td>
-                        <td>
-                            <div class="draggable" draggable="true">1
-                            </div>
-                        </td>
-                        <td>
-                            <div class="draggable" draggable="true">0
-                            </div>
-                        </td>
-                        <td>
-                            <div class="draggable" draggable="true">622
-                            </div>
-                        </td>
-                    </tr>
-
-                </table>
+                <ul style="list-style-type: disc; padding-left: 20px; font-size: 16px; line-height: 1.8;">
+                    <li>A Canopy Jay disperses <div class="draggable" draggable="true" style="display: inline-block;">18</div> seeds per day. There are twice as many Canopy Jays as River Finches.</li>
+                    <li>A Ground Thrush disperses <div class="draggable" draggable="true" style="display: inline-block;">6</div> fewer seeds per day than a Canopy Jay. The number of Ground Thrushes is <div class="draggable" draggable="true" style="display: inline-block;">25%</div> greater than the total number of Canopy Jays and River Finches combined.</li>
+                    <li>A River Finch disperses half as many seeds per day as a Ground Thrush. There are <div class="draggable" draggable="true" style="display: inline-block;">80</div> River Finches in the woodlands.</li>
+                </ul>
                 <br>
 
                 <div id="question_title">Question</div><br>
-                <p>Which formula best describes the relationship shown in the data?
+                <p>How many seeds are dispersed in total by the three bird species per day in the Kebos Woodlands?
                     <br>
                 </p>
                 <br>
-                <form>
-                    <radio>
-                        <label for="Case 5 a">
-                            <input type="radio" id="Case 5 a" name="case_5_radio" value="S = F × (p/v) − 50w"
-                                style="margin-bottom: 10px;"> S = F × (p/v) − 50w  
-                        </label><br>
-                        <label for="Case_5_b" style="margin-bottom: 10px;"> <input type="radio" id="Case 5 b"
-                                name="case_5_radio" value="S = 0.7F − 100(p−1) + 100(v−1) − 50w  " style="margin-bottom: 10px;"> S = 0.7F − 100(p−1) + 100(v−1) − 50w  </label><br>
-                        <label for="Case_5_c" style="margin-bottom: 10px;"><input type="radio" id="Case 5 c"
-                                name="case_5_radio" value="S = 0.6F + 50v − 100p − 50w" style="margin-bottom: 10px;"> S = 0.6F + 50v − 100p − 50w</label><br>
-                        <label for="Case_5_d" style="margin-bottom: 10px;"><input type="radio" id="Case 5 d"
-                                name="case_5_radio" value="S = F − 200p + 200v − 50w" style="margin-bottom: 10px;"> S = F − 200p + 200v − 50w</label><br>
-
-                    </radio>
-
-                </form>
+                <input type="text" class="input_answer" id="Case 5 Input" placeholder="Enter your answer">
 
             </div>
             <button class="end_btn" onclick="showConfirmBox()">Next Case</button>

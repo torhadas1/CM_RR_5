@@ -58,83 +58,100 @@
 
                 <div id="objective" class=container>
                     <div id="research_info_title" class=container>Research Information</div><br>
-                    <div class="the_main_text">You are a conservationist assigned to the Mistyvale Forest Reserve, once
-                        famed for its Fallow Deer
-                        herds but now struggling after a disease ravaged the population. The overall herd size has
-                        declined
-                        considerably, with females being particularly impacted. As a result, the ability of the herd to
-                        rebuild
-                        naturally through reproduction is reduced. </div>
+                    <div class="the_main_text">The Kebos Woodlands was once a thriving ecosystem, home to various kinds of exotic fauna and flora
+                        not found anywhere else in the world. However, in recent years, development of local areas for
+                        farmlands and roads, overgrazing by farm animals, and illegal deforestation have caused a sharp
+                        reduction in local biomass (defined as the surface coverage of fauna like trees, bushes, and grass).
+                        This has had a knock-on effect on the animal species that live in the Woodlands, throwing the
+                        ecosystem in chaos.</div>
                     <br>
-                    <div class="the_main_text">To restore the deer population, your team plans to introduce new female
-                        deer from other regions.</div>
+                    <div class="the_main_text">Your team of conservationist have been approached by the governing body of the Woodlands to help
+                        restore the Kebos Woodlands to its former glory.</div>
                     <br>
                     <div id="objectivex" class=container>Objective</div><br>
-                    <div class="draggable" id="objective_line" data-title="Objective">Determine the best time to
-                        introduce the new female Fallow Deer to the Highwood and Redwood
-                        sub-areas to maximize herd population after a year.
+                    <div class="draggable" id="objective_line" data-title="Objective">Determine if the proposed initiatives can achieve a 20% increase in total biomass units (defined as a
+                        km² of fauna) in the Varla Valley and Custodia Pass.
                     </div>
 
                 </div>
                 <div id="study" class="container"><br>
                     Study Information
                     <div class="container"><br>
-                        Winter, which lasts <div class="draggable study_drag" id="duration_winter" draggable="true"
-                            data-title="Duration of Winter">3 months</div> and is particularly harsh in Mistyvale, is
-                        fast approaching. Mating
-                        season occurs in <div class="draggable study_drag" id="mating_season" draggable="true"
-                            data-title="Mating Season">Spring</div>, and Fallow Deer are known to be very selective when
-                        choosing a mate.
-                        Periods of bonding is usually required before mating occurs. As a result, your team is
-                        considering 2
-                        options:<br><br>
-
-                        Option 1:<br>
-                        <div class="draggable study_drag" draggable="true" id="option1" data-title="Option 1">
-                            Add 60 female deer to each sub-area right as winter starts (Month 1) to allow for more
-                            bonding time,
-                            but a lower chance of surviving the winter months.
-                        </div><br><br>
-
-                        Option 2:<br>
-                        <div class="draggable study_drag" draggable="true" id="option2" data-title="Option 2">
-                            Add 60 female deer to each sub-area right as spring starts (Month 4) to avoid death during
-                            winter
-                            months, but reduced bonding time.
-                        </div><br><br>
-                        The following represents the expected mortality of Fallow Deer due to the harsh winter:
+                        The Kebos Woodlands is home to various kinds of fauna, but they can generally be grouped into
+                        three main categories: trees, bushes, and grass. After an extensive survey of the various zones within
+                        the Kebos Woodlands, your team has mapped out the following biomass distribution:
                     </div>
                 </div>
                 <div id="first_exhibit" class="container">
-                    <br> Exhibit 1: Mortality of Fallow Deer due to the Winter
+                    <br> Exhibit 1: Biomass distribution across Kebos Woodlands (in km²)
                     <table class="exhibit-table">
                         <thead>
                             <tr>
-                                <th>Winter Month</th>
-                                <th>Mortality (out of population at start of month)</th>
+                                <th>Zones</th>
+                                <th>Trees</th>
+                                <th>Bushes</th>
+                                <th>Grass</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <td>1</td>
+                                <td>Oakwood</td>
+                                <td>
+                                    <div class="draggable" id="exhibit_draggable1"
+                                        data-title="Trees in Oakwood (km²)" data-value="70">70</div>
+                                </td>
                                 <td>
                                     <div class="draggable" id="exhibit_draggable2"
-                                        data-title="Mortality during winter month 1" data-value="1 out of 6">1 out of 6
-                                    </div>
+                                        data-title="Bushes in Oakwood (km²)" data-value="55">55</div>
+                                </td>
+                                <td>
+                                    <div class="draggable" id="exhibit_draggable3"
+                                        data-title="Grass in Oakwood (km²)" data-value="75">75</div>
                                 </td>
                             </tr>
                             <tr>
-                                <td>2</td>
+                                <td>Varla Valley</td>
                                 <td>
                                     <div class="draggable" id="exhibit_draggable4"
-                                        data-title="Mortality during winter month 2" data-value="1 out of 10">1 out of 10</div>
+                                        data-title="Trees in Varla Valley (km²)" data-value="25">25</div>
+                                </td>
+                                <td>
+                                    <div class="draggable" id="exhibit_draggable5"
+                                        data-title="Bushes in Varla Valley (km²)" data-value="20">20</div>
+                                </td>
+                                <td>
+                                    <div class="draggable" id="exhibit_draggable6"
+                                        data-title="Grass in Varla Valley (km²)" data-value="50">50</div>
                                 </td>
                             </tr>
                             <tr>
-                                <td>3</td>
+                                <td>Riverbend</td>
                                 <td>
-                                    <div class="draggable" id="exhibit_draggable6"
-                                        data-title="Mortality during winter month 3" data-value="1 out of 10">1 out of 10</div>
+                                    <div class="draggable" id="exhibit_draggable7"
+                                        data-title="Trees in Riverbend (km²)" data-value="40">40</div>
+                                </td>
+                                <td>
+                                    <div class="draggable" id="exhibit_draggable8"
+                                        data-title="Bushes in Riverbend (km²)" data-value="45">45</div>
+                                </td>
+                                <td>
+                                    <div class="draggable" id="exhibit_draggable9"
+                                        data-title="Grass in Riverbend (km²)" data-value="30">30</div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Custodia Pass</td>
+                                <td>
+                                    <div class="draggable" id="exhibit_draggable10"
+                                        data-title="Trees in Custodia Pass (km²)" data-value="55">55</div>
+                                </td>
+                                <td>
+                                    <div class="draggable" id="exhibit_draggable11"
+                                        data-title="Bushes in Custodia Pass (km²)" data-value="30">30</div>
+                                </td>
+                                <td>
+                                    <div class="draggable" id="exhibit_draggable12"
+                                        data-title="Grass in Custodia Pass (km²)" data-value="60">60</div>
                                 </td>
                             </tr>
                         </tbody>
@@ -142,100 +159,91 @@
                 </div>
                 <div class="container study-text">
                     <br>
-                    The mortality rate will <div class="draggable study_drag" draggable="true" id="mortality_gender"
-                        data-title="Impact of winter mortality by gender">apply equally to male and female deer</div>.
-                    <br><br>
-                    In addition to winter-related deaths, Fallow deer are also <div class="draggable study_drag"
-                        draggable="true" id="predators" data-title="Fallow deer predators">hunted by Frostfang Wolves
-                    </div>. On average,
-                    Frostfang Wolves have a kill rate (deer per wolf per month) of <div class="draggable study_drag"
-                        id="kill_rate" draggable="true" data-title="Frostfang Wolf non-winter kill rate">0.4 during
-                        non-winter months</div>. During
-                    winter months, this <div class="draggable study_drag" draggable="true" id="winter_kill_rate"
-                        data-title="Change in Frostfang Wolf kill rate during winter">increases by 50%</div>. Male and
-                    female Fallow Deer are <div class="draggable study_drag" draggable="true" id="hunting_habits"
-                        data-title="Frostfang Wolf hunting habits by gender of Fallow Deer">hunted proportionately</div>
-                    by
-                    the Frostfang Wolves.<br><br>
+                    Various brainstorming sessions and feasibility studies were also conducted, resulting in the following
+                    initiatives to be implemented in the coming months:<br><br>
 
-                    Assume that there are <div class="draggable study_drag" draggable="true" id="other_factors"
-                        data-title="Other factors impacting Fallow Deer population">no other expected causes of death
-                    </div>
-                    beyond those outlined above.<br><br>
+                    <div style="font-weight: bold;" class="container">Initiative 1: <div class="draggable study_drag" draggable="true" id="initiative1"
+                        data-title="Initiative 1">Transplant 30% of the trees from Oakwood to Varla Valley</div></div> <br>
 
-                    Field teams have surveyed each sub-area in Mistyvale to provide the following snapshot on Fallow
-                    Deer and Frostfang Wolf populations:
+                    Only trees that are <div class="draggable study_drag" draggable="true" id="tree_age"
+                        data-title="Age of transplanted trees"> at least 3-years old</div> would be transplanted to minimize loss during
+                    transplantation. Unfortunately, transplantation is a difficult process and even with the precautions,
+                    <div class="draggable study_drag" draggable="true" id="tree_loss"
+                        data-title="Tree loss from tree transplantation">1m² of trees are lost for every 7m² transplanted</div>.<br><br>
+
+                    Transplanting trees in the new location will also damage local flora, with an expected loss of <div class="draggable study_drag" draggable="true" id="bush_loss"
+                        data-title="Bush loss from tree transplantation">1m² of bushes for every 20m² of trees successfully transplanted</div> and <div class="draggable study_drag" draggable="true" id="grass_loss"
+                        data-title="Grass loss from tree transplantation">1m² of grass for every 10m² of trees successfully transplanted</div>.<br><br>
+
+                    <div style="font-weight: bold;" class="container">Initiative 2: <div class="draggable study_drag" draggable="true" id="initiative2"
+                        data-title="Initiative 2">Set up animal barriers in Varla Valley, Riverbend, and Custodia Pass</div></div><br>
+
+                    Animal barriers will prevent overgrazing in the select zones, helping restore bush and grass biomass
+                    over time. A <div class="draggable study_drag" draggable="true" id="bush_recovery"
+                        data-title="Bush biomass improvement from animal barriers">5% recovery is expected for bushes, independent of other initiatives.</div> Meanwhile, a <div class="draggable study_drag" draggable="true" id="grass_recovery"
+                        data-title="Grass biomass improvement from animal barriers">10% recovery is expected for grass, independent of other initiatives.</div><br><br>
+
+                    <div style="font-weight: bold;" class="container">Initiatives 3: <div class="draggable study_drag" draggable="true" id="initiative3"
+                        data-title="Initiative 3">Dissemination of fertilizer across the zones</div></div><br>
+
+                    Fertilizer will be disseminated across all 4 zones. When fertilized, bushes are expected to <div class="draggable study_drag" draggable="true" id="bush_fertilizer_growth"
+                        data-title="Bush biomass improvement from fertilizers">grow by 10%</div>, while grass is expected to <div class="draggable study_drag" draggable="true" id="grass_fertilizer_growth"
+                        data-title="Grass biomass improvement from fertilizers">grow by 20%</div>. The following exhibit shows the % of existing bushes
+                    and grass that will be fertilized:
                 </div>
                 <div id="second_exhibit" class="container">
-                    <br> Exhibit 2: Fallow Deer & Frostfang Wolf Counts (Month 0)
+                    <br> Exhibit 2: Dissemination plan for fertilizer across Kebos Woodlands
                     <table class="exhibit-table">
                         <thead>
                             <tr>
-                                <th>Sub-area</th>
-                                <th>Male Fallow Deer<br>(Start of year)</th>
-                                <th>Female Fallow Deer<br>(Start of year)</th>
-                                <th>Frostfang Wolf<br>(Start of year)</th>
+                                <th>Zones</th>
+                                <th>% of existing bushes fertilized</th>
+                                <th>% of existing grass fertilized</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <td>Highwood</td>
+                                <td>Oakwood</td>
                                 <td>
                                     <div class="draggable" id="exhibit2_draggable1"
-                                        data-title="Male Fallow Deer in Highwood" data-value="105">105</div>
+                                        data-title="% of existing bushes fertilized in Oakwood" data-value="35">35</div>
                                 </td>
                                 <td>
                                     <div class="draggable" id="exhibit2_draggable2"
-                                        data-title="Female Fallow Deer in Highwood" data-value="40">40</div>
-                                </td>
-                                <td>
-                                    <div class="draggable" id="exhibit2_draggable3"
-                                        data-title="Frostfang Wolf in Highwood" data-value="2">2</div>
+                                        data-title="% of existing grass fertilized in Oakwood" data-value="25">25</div>
                                 </td>
                             </tr>
                             <tr>
-                                <td>Redwood</td>
+                                <td>Varla Valley</td>
                                 <td>
-                                    <div class="draggable" id="exhibit2_draggable4"
-                                        data-title="Male Fallow Deer in Redwood" data-value="120">120</div>
+                                    <div class="draggable" id="exhibit2_draggable3"
+                                        data-title="% of existing bushes fertilized in Varla Valley" data-value="50">50</div>
                                 </td>
                                 <td>
+                                    <div class="draggable" id="exhibit2_draggable4"
+                                        data-title="% of existing grass fertilized in Varla Valley" data-value="25">25</div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Riverbend</td>
+                                <td>
                                     <div class="draggable" id="exhibit2_draggable5"
-                                        data-title="Female Fallow Deer in Redwood" data-value="35">35</div>
+                                        data-title="% of existing bushes fertilized in Riverbend" data-value="40">40</div>
                                 </td>
                                 <td>
                                     <div class="draggable" id="exhibit2_draggable6"
-                                        data-title="Frostfang Wolf in Redwood" data-value="3">3</div>
+                                        data-title="% of existing grass fertilized in Riverbend" data-value="50">50</div>
                                 </td>
                             </tr>
                             <tr>
-                                <td>Pinecliff</td>
+                                <td>Custodia Pass</td>
                                 <td>
                                     <div class="draggable" id="exhibit2_draggable7"
-                                        data-title="Male Fallow Deer in Pinecliff" data-value="105">105</div>
+                                        data-title="% of existing bushes fertilized in Custodia Pass" data-value="60">60</div>
                                 </td>
                                 <td>
                                     <div class="draggable" id="exhibit2_draggable8"
-                                        data-title="Female Fallow Deer in Pinecliff" data-value="45">45</div>
-                                </td>
-                                <td>
-                                    <div class="draggable" id="exhibit2_draggable9"
-                                        data-title="Frostfang Wolf in Pinecliff" data-value="4">4</div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>Marshfield</td>
-                                <td>
-                                    <div class="draggable" id="exhibit2_draggable10"
-                                        data-title="Male Fallow Deer in Marshfield" data-value="110">110</div>
-                                </td>
-                                <td>
-                                    <div class="draggable" id="exhibit2_draggable11"
-                                        data-title="Female Fallow Deer in Marshfield" data-value="50">50</div>
-                                </td>
-                                <td>
-                                    <div class="draggable" id="exhibit2_draggable12"
-                                        data-title="Frostfang Wolf in Marshfield" data-value="3">3</div>
+                                        data-title="% of existing grass fertilized in Custodia Pass" data-value="20">20</div>
                                 </td>
                             </tr>
                         </tbody>
@@ -243,23 +251,6 @@
                 </div>
                 <div class="container study-text">
                     <br>
-                    Fallow Deer <div class="draggable study_drag" draggable="true" id="breeding_period"
-                        data-title="Fallow Deer peak breeding period">typically breed in mid spring (Months 5)</div>,
-                    with a gestation period of about <div class="draggable study_drag" draggable="true" id="gestation"
-                        data-title="Fallow Deer gestation period">four months</div>.
-                    The fawn (baby deer) is not expected to have higher mortality than adults due to Frostfang
-                    Wolves.<br><br>
-
-                    If the additional Fallow Deer were added during Winter, then <div class="draggable study_drag"
-                        draggable="true" id="breeding_rate_option1" data-title="Breeding rate under Option 1">80% of all
-                        surviving adult females</div> (both
-                    existing and new) will breed. If bonding was limited, only <div class="draggable study_drag"
-                        draggable="true" id="breeding_rate_option2" data-title="Breeding rate under Option 2">20% of all
-                        surviving adult females</div> (both
-                    existing and new) will breed. Each successful breeding results in <div class="draggable study_drag"
-                        draggable="true" data-title="Outcome of breeding" id="breeding_outcome">1 fawn</div>.
-
-                    <br><br>
 
                     <div>
                         <button class="end_btn" onclick="showConfirmBox()">Complete Investigation</button>

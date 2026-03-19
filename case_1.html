@@ -6,14 +6,61 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>6 Cases | Case 1</title>
-    <link rel="stylesheet" href="./style/case_7.css">
     <link rel="stylesheet" href="./style/cases_general.css">
-
+    <link rel="stylesheet" href="./style/case_2.css">
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
-    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+    <style>
+        #tutorialPopupBox {
+            background: #333f50;
+            border: 3px solid #888;
+            border-radius: 18px;
+            box-shadow: 0 2px 18px rgba(0,0,0,0.4);
+            padding: 40px 40px 32px 40px;
+            width: 82%;
+            margin-left: 100px;
+            height: 530px;
+            color: #fff;
+            text-align: left;
+            margin-left: px;
+            font-size: 1.18em;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+        }
+        .tutorial-title {
+            font-weight: bold;
+            font-size: 30px;
+            background-color: #333f50;
+            margin-bottom: 24px;
+            color: #fff;
+        }
+        .tutorial-text {
+            margin-bottom: 36px;
+            font-size: 24px;
+            color: #fff;
+            background-color: #333f50;
+        }
+        .tutorial-continue-btn {
+            font-size: 18px;
+            color: #222a35;
+            background: #d6dce5;
+            border: 2px solid #888;
+            border-radius: 8px;
+            padding: 4px 36px;
+            font-weight: 500;
+            margin-top: 240px;
+            align-self: center;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        .tutorial-continue-btn:hover {
+            background: #bfc7d1;
+        }
+    </style>
 </head>
 
 <body class="body">
@@ -43,124 +90,30 @@
             </div>
         </div>
         <!--main screen column-->
-        <div class="main_screen column">
+        <div class="main_screen column" style="width: 85%;">
+            <br>
+            <div class="question_container"> Researchers are trying to find the best fertilizer formulation to increase
+                biomass growth of Sedge Grass. They have split existing Sedge Grass into segments and tested different
+                fertilizer formulations on each segment, compiling data on each segment's total biomass over time.
+            </div>
+
+            <br>
             <div class="question_container">
-                <h1>A research team has been studying the territory growth of Arctic Wolf packs in the Mistyvale Forest
-                    Reserve over several years. Below is a table documenting their territory over four years (in
-                    km<sup style="font-size: 16px;">2</sup>).
-                </h1>
-                <br>
-                <table class="exhibit-table">
-                    <thead>
-                        <tr>
-                            <th>Arctic Wolf Pack</th>
-                            <th>Y1</th>
-                            <th>Y2</th>
-                            <th>Y3</th>
-                            <th>Y4</th>
-
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>A</td>
-                            <td>
-                                <div class="draggable" id="exhibit2_draggable1"
-                                    data-title="Male Fallow Deer in Highwood" data-value="392">392</div>
-                            </td>
-                            <td>
-                                <div class="draggable" id="exhibit2_draggable2"
-                                    data-title="Female Fallow Deer in Highwood" data-value="410">410</div>
-                            </td>
-                            <td>
-                                <div class="draggable" id="exhibit2_draggable3" data-title="Frostfang Wolf in Highwood"
-                                    data-value="399">399</div>
-                            </td>
-                            <td>
-                                <div class="draggable" id="exhibit2_draggable12"
-                                    data-title="Frostfang Wolf in Marshfield" data-value="462">462</div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>B</td>
-                            <td>
-                                <div class="draggable" id="exhibit2_draggable4" data-title="Male Fallow Deer in Redwood"
-                                    data-value="175">175</div>
-                            </td>
-                            <td>
-                                <div class="draggable" id="exhibit2_draggable5"
-                                    data-title="Female Fallow Deer in Redwood" data-value="174">174</div>
-                            </td>
-                            <td>
-                                <div class="draggable" id="exhibit2_draggable6" data-title="Frostfang Wolf in Redwood"
-                                    data-value="193">193</div>
-                            </td>
-                            <td>
-                                <div class="draggable" id="exhibit2_draggable12"
-                                    data-title="Frostfang Wolf in Marshfield" data-value="205">205</div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>C</td>
-                            <td>
-                                <div class="draggable" id="exhibit2_draggable7"
-                                    data-title="Male Fallow Deer in Pinecliff" data-value="598">598</div>
-                            </td>
-                            <td>
-                                <div class="draggable" id="exhibit2_draggable8"
-                                    data-title="Female Fallow Deer in Pinecliff" data-value="584">584</div>
-                            </td>
-                            <td>
-                                <div class="draggable" id="exhibit2_draggable9" data-title="Frostfang Wolf in Pinecliff"
-                                    data-value="732">732</div>
-                            </td>
-                            <td>
-                                <div class="draggable" id="exhibit2_draggable12"
-                                    data-title="Frostfang Wolf in Marshfield" data-value="752">752</div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>D</td>
-                            <td>
-                                <div class="draggable" id="exhibit2_draggable10"
-                                    data-title="Male Fallow Deer in Marshfield" data-value="478">478</div>
-                            </td>
-                            <td>
-                                <div class="draggable" id="exhibit2_draggable11"
-                                    data-title="Female Fallow Deer in Marshfield" data-value="512">512</div>
-                            </td>
-                            <td>
-                                <div class="draggable" id="exhibit2_draggable12"
-                                    data-title="Frostfang Wolf in Marshfield" data-value="503">503</div>
-                            </td>
-                            <td>
-                                <div class="draggable" id="exhibit2_draggable12"
-                                    data-title="Frostfang Wolf in Marshfield" data-value="712">712</div>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-
-                <br>
-                <h1 id="question_title">Question</h1><br>
-                <p style="margin-bottom: 10px;">Which year had the largest increase in wolf pack territory compared to
-                    the previous year, and what
-                    was the percentage of that increase? </p>
+                <h1 id="question_title"  style="font-weight: 500;">Question</h1><br>
+                <p style="margin-bottom: 10px;">What would be the best graph to visualize the impact of different
+                    fertilizer formulations on the biomass growth of Sedge Grass over time?</p>
                 <form>
                     <br>
-                    <label for="9.Case 1">Answer</label>
+                    <label for="Case 1 Select" style="font-weight: 500;">Answer</label>
                     <br><br>
 
                     <select class="select_box" type="text" id="Case 1 Select">
                         <option disabled selected value></option>
-                        <option value="Year 2">Year 2</option>
-                        <option value="Year 3">Year 3</option>
-
-                        <option value="Year 4">Year 4</option>
+                        <option value="Line Graph">Line Graph</option>
+                        <option value="Bar Chart">Bar Chart</option>
+                        <option value="Scatterplot">Scatterplot</option>
+                        <option value="Pie Chart">Pie Chart</option>
                     </select>
-                    increased by <input class="input_answer" style="width: 70px;" type="number" id="Case 1 Input">% from
-                    the previous
-                    year.
 
                 </form>
                 <br>
@@ -189,7 +142,7 @@
                 <div class="overlay" id="overlay" hidden>
                     <div class="confirm-box">
                         <h2 id="forward">Do you want to move to the next question?</h2><br>
-                        <p id="inside_confirm_p">You won’t be able to change your answer</p>
+                        <p id="inside_confirm_p">You won't be able to change your answer</p>
                         <br>
                         <button onclick="isConfirm(false)" class="confirm_btn">Back to question</button>
                         <button onclick="location.href='case_2.html';" class="confirm_btn">Move forward</button>
@@ -199,42 +152,8 @@
             </div>
         </div>
     </div>
-    <div class="right_screen column">
-        <div class="container">
-            <div class="calculator">
-                <div class="display">
-                    <div id="historyDisplay" class="history-display"></div>
-                    <input type="text" id="inputField">
-                    <hr id="sep_line">
-
-                    <div id="result" class="draggable" draggable="true">0</div>
-                </div>
-                <div class="buttons">
-                    <button class="calculator-btn items" data-value="AC">AC</button>
-                    <button class="calculator-btn items" data-value="(">(</button>
-                    <button class="calculator-btn items" data-value=")">)</button>
-                    <button class="calculator-btn items" data-value="C">C</button>
-                    <button class="calculator-btn" data-value="7">7</button>
-                    <button class="calculator-btn" data-value="8">8</button>
-                    <button class="calculator-btn" data-value="9">9</button>
-                    <button class="calculator-btn items" data-value="/">/</button>
-                    <button class="calculator-btn" data-value="4">4</button>
-                    <button class="calculator-btn" data-value="5">5</button>
-                    <button class="calculator-btn" data-value="6">6</button>
-                    <button class="calculator-btn items" data-value="*">*</button>
-                    <button class="calculator-btn" data-value="1">1</button>
-                    <button class="calculator-btn" data-value="2">2</button>
-                    <button class="calculator-btn" data-value="3">3</button>
-                    <button class="calculator-btn items" data-value="-">-</button>
-                    <button class="calculator-btn" data-value="0">0</button>
-                    <button class="calculator-btn" data-value=".">.</button>
-                    <button class="calculator-btn" data-value="=">=</button>
-                    <button class="calculator-btn items" data-value="+">+</button>
-                </div>
-            </div>
-        </div>
-        <script src="./js/case_1.js"></script>
-        <script src="./js/cases.js"></script>
+    <script src="./js/case_1.js"></script>
+    <script src="./js/cases.js"></script>
 
 </body>
 

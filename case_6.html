@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>6 Cases | Case 6</title>
-    <link rel="stylesheet" href="./style/case_1.css">
+    <link rel="stylesheet" href="./style/case_7.css">
     <link rel="stylesheet" href="./style/cases_general.css">
 
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
@@ -44,49 +44,62 @@
         <!--main screen column-->
         <div class="main_screen column">
             <br>
-            <div class="question_container"> Researchers have been studying the territorial behavior of Arctic Foxes in
-                the Mistyvale Forest
-                Reserve. They have broken down the Reserve into quadrants and mapped out the Fox population
-                density (i.e., animals per quadrant) in the histogram below:
+            <div class="question_container"> Researchers have been studying the growth of Camphor trees in the Kebos
+                Woodlands. The Camphor tree was first introduced to the Woodlands almost 60 years ago, and as part of
+                their study, they mapped out the age of individual trees and presented said data in the following
+                histogram:
             </div>
 
             <br>
-            <div style="text-align: left; margin-left: 50px;">
-                <img src="./img/case6_chart.png" alt="cases_bar_chart"><br><br>
+            <div style="text-align: left; margin-left: 50px; max-width: 600px; position: relative; display: inline-block;">
+                <img src="./img/case6_chart.png" alt="Camphor tree age distribution histogram" style="max-width: 100%; display: block;">
+                <div class="draggable" draggable="true" data-title="Camphor trees aged 0-9" data-value="150" style="position: absolute; top: 51%; left: 10%; padding: 2px 6px; z-index: 10;">150</div>
+                <div class="draggable" draggable="true" data-title="Camphor trees aged 10-19" data-value="450" style="position: absolute; top: 13%; left: 25%; padding: 2px 6px; z-index: 10;">450</div>
+                <div class="draggable" draggable="true" data-title="Camphor trees aged 20-29" data-value="300" style="position: absolute; top: 32%; left: 41%; padding: 2px 6px; z-index: 10;">300</div>
+                <div class="draggable" draggable="true" data-title="Camphor trees aged 30-39" data-value="370" style="position: absolute; top: 23%; left: 57%; padding: 2px 6px; z-index: 10;">370</div>
+                <div class="draggable" draggable="true" data-title="Camphor trees aged 40-49" data-value="130" style="position: absolute; top: 53%; left: 70%; padding: 2px 6px; z-index: 10;">130</div>
+                <div class="draggable" draggable="true" data-title="Camphor trees aged 50-59" data-value="160" style="position: absolute; top: 50%; left: 86%; padding: 2px 6px; z-index: 10;">160</div>
             </div>
             <div class="question_container" style="margin-right: 20px;">
                 <div id="the_question_title" style="font-weight: 500;">Question <br><br></div>
 
-                <p id="the_question">Please summarize the graph by identifying the mean, median, and mode of Foxes per
-                    quadrant.
+                <p id="the_question">Please summarize the graph by identifying the mean, median, and mode of Camphor
+                    tree age range.
 
                 </p><br>
                 <label for="Case 6 Mean">Mean =
                     <select class="select_box" style="margin-bottom: 10px;" name="reach" id="Case 6 Mean" required>
                         <option disabled selected value></option>
-                        <option value="<15"> &lt;15 </option>
-                        <option value="=15"> =15 </option>
-
-                        <option value="&gt;15">&gt;15</option>
+                        <option value="0-9">0-9</option>
+                        <option value="10-19">10-19</option>
+                        <option value="20-29">20-29</option>
+                        <option value="30-39">30-39</option>
+                        <option value="40-49">40-49</option>
+                        <option value="50-59">50-59</option>
                     </select><br>
                 </label>
 
-                <label for="Case_6_Median" >
-                     Median = <select class="select_box"  style="margin-bottom: 10px;"  name="reach"
+                <label for="Case_6_Median">
+                     Median = <select class="select_box" style="margin-bottom: 10px;" name="reach"
                         id="Case 6 Median" required>
                         <option disabled selected value></option>
-                        <option value="<15"> &lt;15 </option>
-                        <option value="=15"> =15 </option>
-                        <option value="&gt;15">&gt;15</option>
+                        <option value="0-9">0-9</option>
+                        <option value="10-19">10-19</option>
+                        <option value="20-29">20-29</option>
+                        <option value="30-39">30-39</option>
+                        <option value="40-49">40-49</option>
+                        <option value="50-59">50-59</option>
                     </select><br></label>
 
                 <label for="Case_6_Mode" style="margin-bottom: 10px;"> Mode = <select class="select_box" name="reach"
                         id="Case 6 Mode" required>
                         <option disabled selected value></option>
-                        <option value="<15"> &lt;15 </option>
-                        <option value="=15"> =15 </option>
-
-                        <option value="&gt;15">&gt;15</option>
+                        <option value="0-9">0-9</option>
+                        <option value="10-19">10-19</option>
+                        <option value="20-29">20-29</option>
+                        <option value="30-39">30-39</option>
+                        <option value="40-49">40-49</option>
+                        <option value="50-59">50-59</option>
                     </select></label>
 
             </div>
@@ -96,7 +109,7 @@
                 <div class="overlay" id="overlay" hidden>
                     <div class="confirm-box">
                         <h2 id="forward">Are you sure you want to finish the test?</h2><br>
-                        <p id="inside_confirm_p">You won’t be able to change your answer</p>
+                        <p id="inside_confirm_p">You won't be able to change your answer</p>
                         <button onclick="isConfirm(false)" class="confirm_btn">Back to question</button>
                         <button onclick="location.href='test_review.html';" class="confirm_btn">Finish test</button>
                     </div>
@@ -105,8 +118,42 @@
 
         </div>
     </div>
-    <script src="./js/calculator.js"></script>
-    <script src="./js/cases.js"></script>
+    <div class="right_screen column">
+        <div class="container">
+            <div class="calculator">
+                <div class="display">
+                    <div id="historyDisplay" class="history-display"></div>
+                    <input type="text" id="inputField" lang="en">
+                    <hr id="sep_line">
+                    <div id="result" class="draggable" draggable="true"> 0 </div>
+
+                </div>
+                <div class="buttons">
+                    <button class="calculator-btn items" data-value="AC">AC</button>
+                    <button class="calculator-btn items" data-value="(">(</button>
+                    <button class="calculator-btn items" data-value=")">)</button>
+                    <button class="calculator-btn items" data-value="C">C</button>
+                    <button class="calculator-btn" data-value="7">7</button>
+                    <button class="calculator-btn" data-value="8">8</button>
+                    <button class="calculator-btn" data-value="9">9</button>
+                    <button class="calculator-btn items" data-value="/">/</button>
+                    <button class="calculator-btn" data-value="4">4</button>
+                    <button class="calculator-btn" data-value="5">5</button>
+                    <button class="calculator-btn" data-value="6">6</button>
+                    <button class="calculator-btn items" data-value="*">*</button>
+                    <button class="calculator-btn" data-value="1">1</button>
+                    <button class="calculator-btn" data-value="2">2</button>
+                    <button class="calculator-btn" data-value="3">3</button>
+                    <button class="calculator-btn items" data-value="-">-</button>
+                    <button class="calculator-btn" data-value="0">0</button>
+                    <button class="calculator-btn" data-value=".">.</button>
+                    <button class="calculator-btn" data-value="=">=</button>
+                    <button class="calculator-btn items" data-value="+">+</button>
+                </div>
+            </div>
+        </div>
+        <script src="./js/case_1.js"></script>
+        <script src="./js/cases.js"></script>
 
 </body>
 

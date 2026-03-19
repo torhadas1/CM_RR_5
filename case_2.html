@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>6 Cases | Case 2</title>
-    <link rel="stylesheet" href="./style/case_1.css">
+    <link rel="stylesheet" href="./style/case_7.css">
     <link rel="stylesheet" href="./style/cases_general.css">
 
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
@@ -43,61 +43,88 @@
         </div>
         <!--main screen column-->
         <div class="main_screen column">
-            <br>
-            <div class="question_container"> A wildlife research team is studying five different bird populations across
-                four different sub-areas
-                within the Mistyvale Forest Reserve. These bird species are territorial and do not move between sub
-                areas.
-            </div>
-
-            <br>
-            <div class="question_container">
-                <div class="question_title">Question</div>
+            <div class="question_container" style="margin-right: 30px;">
+                <h1> The Kebos Woodlands is home to hundreds of major tree species, some of which are more resilient when transplanted compared to others. Your team of conservationists are considering transplanting the following tree species:
+                </h1>
                 <br>
-                <p> What could be the best graph type to visualize how individual bird populations compare against each
-                    other within and between sub-areas.
-                </p>
+                <table class="exhibit-table">
+                    <tr>
+                        <th>Tree Species</th>
+                        <th>Trees to be transplanted</th>
+                        <th>Probability of dying during transplantation</th>
+                        <th>Probability of dying after successful transplantation</th>
+                    </tr>
+                    <tr>
+                        <td style="text-align: left;">Yew</td>
+                        <td>
+                            <div class="draggable" draggable="true">200</div>
+                        </td>
+                        <td>
+                            <div class="draggable" draggable="true">10%</div>
+                        </td>
+                        <td>
+                            <div class="draggable" draggable="true">5%</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: left;">Camphor</td>
+                        <td>
+                            <div class="draggable" draggable="true">160</div>
+                        </td>
+                        <td>
+                            <div class="draggable" draggable="true">5%</div>
+                        </td>
+                        <td>
+                            <div class="draggable" draggable="true">15%</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: left;">Ironwood</td>
+                        <td>
+                            <div class="draggable" draggable="true">300</div>
+                        </td>
+                        <td>
+                            <div class="draggable" draggable="true">10%</div>
+                        </td>
+                        <td>
+                            <div class="draggable" draggable="true">8%</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: left;">Rosewood</td>
+                        <td>
+                            <div class="draggable" draggable="true">200</div>
+                        </td>
+                        <td>
+                            <div class="draggable" draggable="true">7%</div>
+                        </td>
+                        <td>
+                            <div class="draggable" draggable="true">15%</div>
+                        </td>
+                    </tr>
+                </table>
                 <br>
-                <form id="Case 2" >
-                    <label for="Case 2 a" style="margin-bottom: 10px;">
-                        <input type="radio" id="Case 3 a" name="case_2_radio" value="Individual pie charts for each sub-area. 
-"> Individual pie charts for each sub-area.
+                <div id="question_title">Question</div><br>
 
-                    </label><br>
-
-                    <label for="Case_2_b" style="margin-bottom: 10px;"> <input type="radio" id="Case 2 b"
-                            name="case_2_radio" value="Line graph showing species populations with each line representing a bird species. 
-">
-                        Line graph showing species populations with each line representing a bird species.
-                    </label><br>
-
-                    <label for="Case_2_c" style="display: flex; align-items: first baseline; gap: 5px;"><input type="radio" id="Case 2 c"
-                            name="case_2_radio" value="Mekko (Marimekko) chart with width representing total population by sub-area and height 
-representing species composition. "> Mekko (Marimekko) chart with width representing total population by sub-area and
-                        height
-                        representing species composition. </label>
-
-                    <label for="Case_2_d"  style="display: flex; align-items: first baseline; gap: 5px; margin-bottom: 10px;" ><input type="radio" id="Case 2 d"
-                            name="case_2_radio"
-                            value="Simple bar chart with each bar representing population of one species in one sub-area. ">
-                        Simple
-                        bar chart with each bar representing population of one species in one sub-area. </label><br>
+                What is the expected overall probability for a tree in the group above to survive the entire transplantation process? Round your answer to the closest 1 decimal point. <br><br>
+                <br>
+                <form>
+                    <div class="input_box">
+                        <label for="case_2">Overall survival probability = </label>
+                        <input type="text" class="input_answer" id="Case 2 Input" min="0">
+                        <label>%</label>
+                    </div>
 
                 </form>
-                <br>
 
-                <br>
-
-
-                <br>
-
-                <div><button class="end_btn" onclick="showConfirmBox()">Next Case</button></div>
             </div>
+            <button class="end_btn" onclick="showConfirmBox()">Next Case</button>
+
             <div class="container_main_screen">
                 <div class="overlay" id="overlay" hidden>
-                    <div class="confirm-box" style="top: 30%;">
+                    <div class="confirm-box">
                         <h2 id="forward">Do you want to move to the next question?</h2><br>
-                        <p id="inside_confirm_p">You won’t be able to change your answer</p>
+                        <p id="inside_confirm_p">You won't be able to change your answer</p>
                         <br>
                         <button onclick="isConfirm(false)" class="confirm_btn">Back to question</button>
                         <button onclick="location.href='case_3.html';" class="confirm_btn">Move forward</button>
@@ -106,8 +133,42 @@ representing species composition. "> Mekko (Marimekko) chart with width represen
             </div>
         </div>
     </div>
-    <script src="./js/calculator.js"></script>
-    <script src="./js/cases.js"></script>
+    <div class="right_screen column">
+        <div class="container">
+            <div class="calculator">
+                <div class="display">
+                    <div id="historyDisplay" class="history-display"></div>
+                    <input type="text" id="inputField" lang="en">
+                    <hr id="sep_line">
+                    <div id="result" class="draggable" draggable="true"> 0 </div>
+
+                </div>
+                <div class="buttons">
+                    <button class="calculator-btn items" data-value="AC">AC</button>
+                    <button class="calculator-btn items" data-value="(">(</button>
+                    <button class="calculator-btn items" data-value=")">)</button>
+                    <button class="calculator-btn items" data-value="C">C</button>
+                    <button class="calculator-btn" data-value="7">7</button>
+                    <button class="calculator-btn" data-value="8">8</button>
+                    <button class="calculator-btn" data-value="9">9</button>
+                    <button class="calculator-btn items" data-value="/">/</button>
+                    <button class="calculator-btn" data-value="4">4</button>
+                    <button class="calculator-btn" data-value="5">5</button>
+                    <button class="calculator-btn" data-value="6">6</button>
+                    <button class="calculator-btn items" data-value="*">*</button>
+                    <button class="calculator-btn" data-value="1">1</button>
+                    <button class="calculator-btn" data-value="2">2</button>
+                    <button class="calculator-btn" data-value="3">3</button>
+                    <button class="calculator-btn items" data-value="-">-</button>
+                    <button class="calculator-btn" data-value="0">0</button>
+                    <button class="calculator-btn" data-value=".">.</button>
+                    <button class="calculator-btn" data-value="=">=</button>
+                    <button class="calculator-btn items" data-value="+">+</button>
+                </div>
+            </div>
+        </div>
+        <script src="./js/case_1.js"></script>
+        <script src="./js/cases.js"></script>
 
 </body>
 
