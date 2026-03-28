@@ -216,9 +216,9 @@ $(document).on('click', '.remove', function () {
 });
 
 function updateChart() {
-    var trees = document.getElementById('7. Graph - Increase in Trees (km²)').value || 0;
-    var bushes = document.getElementById('7. Graph - Increase in Bushes (km²)').value || 0;
-    var grass = document.getElementById('7. Graph - Increase in Grass (km²)').value || 0;
+    var trees = document.getElementById('7. Graph - Increase in Trees').value || 0;
+    var bushes = document.getElementById('7. Graph - Increase in Bushes').value || 0;
+    var grass = document.getElementById('7. Graph - Increase in Grass').value || 0;
 
     myChart.data.datasets[0].data = [trees, bushes, grass];
     myChart.update();
@@ -226,9 +226,9 @@ function updateChart() {
 
 
 // Add input event listeners to all input fields
-document.getElementById('7. Graph - Increase in Trees (km²)').addEventListener('input', updateChart);
-document.getElementById('7. Graph - Increase in Bushes (km²)').addEventListener('input', updateChart);
-document.getElementById('7. Graph - Increase in Grass (km²)').addEventListener('input', updateChart);
+document.getElementById('7. Graph - Increase in Trees').addEventListener('input', updateChart);
+document.getElementById('7. Graph - Increase in Bushes').addEventListener('input', updateChart);
+document.getElementById('7. Graph - Increase in Grass').addEventListener('input', updateChart);
 
 document.getElementById('clearStorage').addEventListener('click', function () {
     // Temporarily store isLoggedIn
